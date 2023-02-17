@@ -3,6 +3,8 @@ import { FlatList, Keyboard, StyleSheet, Text, TouchableOpacity, TouchableWithou
 import Header from './components/Header';
 import TodoItem from './components/TodoItem';
 import TodoForm from './components/TodoForm';
+//import SandBox from './components/sandbox';
+import {Ionicons} from "@expo/vector-icons"; 
 
 export default function App() {
   const [todos, setTodos] = useState([
@@ -23,6 +25,7 @@ export default function App() {
   }
 
   return (
+    //<SandBox/>
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
     <View style={styles.container}>
       <Header/>
@@ -48,7 +51,8 @@ const styles = StyleSheet.create({
   },
 
   content: {
-    padding: 40
+    padding: 40,
+    flex: 1
   },
 
   list: {
