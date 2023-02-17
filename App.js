@@ -4,7 +4,6 @@ import Header from './components/Header';
 import TodoItem from './components/TodoItem';
 import TodoForm from './components/TodoForm';
 //import SandBox from './components/sandbox';
-import {Ionicons} from "@expo/vector-icons"; 
 
 export default function App() {
   const [todos, setTodos] = useState([
@@ -33,7 +32,9 @@ export default function App() {
         <TodoForm submitHandler={submitHandler}/>
           <View style={styles.list}>
               <FlatList data={todos} renderItem={({item}) => (
-              <TodoItem item={item} deleteHandler={deleteHandler}/>
+                <>
+                  <TodoItem item={item} deleteHandler={deleteHandler}/>
+                </>
             )}/>
           </View>
         </View>
